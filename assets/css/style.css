@@ -1,0 +1,415 @@
+:root {
+  --primary-color: #0f0e17;
+  --sub-color: #2e2f3e;
+  --primary-bg: #fffffe;
+  --high-lighted-color: #f25f4c;
+  --box-shadow-color: rgba(0, 0, 0, 0.16);
+}
+
+[data-theme="dark"] {
+  --primary-color: #fefefe;
+  --sub-color: #a7a9be;
+  --primary-bg: #050505;
+  --box-shadow-color: rgba(255, 255, 255, 0.16);
+}
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+.s{
+
+  color: #7ca62f;
+  color: #f0676b;
+  color: #00af68;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+strong,
+span,
+div {
+  color: var(--primary-color);
+}
+body {
+  background-color: var(--primary-bg);
+}
+.background-image {
+  background-image: url("../images/bg.png");
+  background-size: cover;
+  background-attachment: fixed;
+  background-blend-mode: multiply;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1999;
+  position: fixed;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 10px 0px;
+}
+
+.glass-nav {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.4px);
+  -webkit-backdrop-filter: blur(6.4px);
+}
+
+.landing-section {
+  height: 100vh;
+  padding: 200px 0px;
+}
+
+.prof-section {
+  margin: 0px 150px;
+}
+
+#particles-js {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Ensures it covers the whole viewport height */
+  overflow: hidden; /* Hide any overflow */
+  z-index: 1; /* Set a base z-index */
+}
+
+#particles-js canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Send particles behind the content */
+}
+
+
+.profile h1{
+  font-size: 52px;
+}
+.profile .iam{
+  font-size: 20px;
+}
+
+.landing-section .prof-section {
+  position: relative;
+  z-index: 2; /* Bring content in front of particles */
+}
+.AboutBtn {
+  padding: 10px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  color: #fffffe;
+  background-color: var(--high-lighted-color);
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  border-radius: 45px;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+}
+
+.high-lighted-color {
+  color: var(--high-lighted-color);
+  font-weight: bold;
+}
+.AboutBtn:hover {
+  background-color: var(--high-lighted-color); /* Color */
+  color: #fffffe; /* Color */
+}
+
+/* About  Section  */
+
+#About {
+  padding-bottom: 30px;
+  padding-top: 80px;
+}
+.AboutStatement {
+  color: var(--high-lighted-color);
+  font-weight: bold;
+  font-size: 26px;
+}
+.persona p {
+  font-size: 1.2rem;
+  color: var(--primary-color); /*color*/
+  font-weight: 300;
+  line-height: 1.8;
+  margin-bottom: 1.4rem;
+}
+.high-lighted {
+  position: relative;
+  padding: 2px 8px;
+  color: #fff !important;
+  font-weight: 500;
+  font-style: italic;
+  display: inline-block;
+  margin: 2px 0;
+  transition: background-color 1s ease; /* Smooth transition */
+}
+
+.high-lighted::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--high-lighted-color);
+  transform: rotate(-2deg);
+  z-index: -1;
+  transition: background-color 1s ease; /* Smooth transition */
+}
+/* ===========================================Stack Tech =========================================== */
+.stack {
+  align-items: center;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.stack div {
+  margin: 10px;
+}
+
+.stack-tech {
+  padding: 0px 15px;
+  font-family: Roboto, sans-serif;
+}
+
+.CSharp {
+  background: linear-gradient(150deg, #9f73d9 50%, #31007b 50%);
+  padding: 0px 10px;
+  border-style: outset;
+  border-top-color: #9f73d9;
+  border-left-color: #9f73d9;
+  border-bottom-color: #31007b;
+  border-right-color: #31007b;
+  color: white;
+}
+
+.SQL-SERVER {
+  background-color: white;
+  border: solid 1px red;
+  color: black;
+  position: relative;
+  padding: 0px 10px;
+  overflow: hidden;
+}
+
+.SQL-SERVER::before {
+  position: absolute;
+  right: 3px;
+  top: -5px;
+  content: "";
+  width: 1px;
+  height: 100%;
+  background-color: black;
+  transform: rotate(140deg);
+}
+
+.Entity {
+  background: linear-gradient(to right, #512bd4 0%, #7c4dff 100%);
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+.LINQ {
+  background: linear-gradient(to right, #0078d7 0%, #005bb5 100%);
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+.ASP {
+  background: linear-gradient(150deg, #6c429c 50%, #5c2d91 50%);
+  padding: 0px 10px;
+  border-style: outset;
+  border-top-color: #9f73d9;
+  border-left-color: #9f73d9;
+  border-bottom-color: #31007b;
+  border-right-color: #31007b;
+  color: #ffffff;
+}
+
+.HTML {
+  background: linear-gradient(to right, #f16529 0%, #f16529 50%, #e44d26 100%);
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+.CSS {
+  background: linear-gradient(to right, #264ee4 0%, #264ee4 50%, #2a65f1 100%);
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+.Bootstrap {
+  background-color: #7511f7;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+.JavaScript {
+  background-color: #f7e018;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  border: 2px solid black; /* Optional: adds a black border to mimic the outline */
+}
+
+.Jquery {
+  background: linear-gradient(to right, #0769ad 0%, #0470b3 100%);
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+.Angular {
+  background: linear-gradient(to right, #de002d 0%, #de002d 50%, #c4002b 100%);
+  color: white;
+  border: outset #c4002b;
+  font-weight: bold;
+  text-align: center;
+}
+
+.Git {
+  background: linear-gradient(to right, #f14e32 0%, #e44e2f 100%);
+  color: white;
+  text-align: center;
+}
+
+.Github {
+  background-color: #181717;
+  color: white;
+  text-align: center;
+}
+
+.Unity {
+  background: linear-gradient(to right, #4d4d4d 0%, #808080 50%, #4d4d4d 100%);
+  color: white;
+  border: outset #4d4d4d;
+  font-weight: bold;
+  text-align: center;
+}
+
+#Projects {
+  padding-bottom: 100px;
+}
+.Project-Card {
+  box-shadow: var(--box-shadow-color) 0px 1px 4px;
+  transition: all 1s;
+  border-radius: 30px;
+  overflow: hidden;
+}
+.Project-Card:hover {
+  transform: translateY(-5px);
+}
+
+.Project-Text {
+  background-color: var(--primary-bg);
+}
+.Project-Title {
+  font-family: "Montserrat", sans-serif;
+  color: var(--primary-color);
+}
+.Project-Desc {
+  font-family: "Montserrat", sans-serif;
+  color: var(--primary-color);
+}
+.Project-Tech {
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  color: var(--primary-color);
+}
+.Project-Links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Project-Link {
+  margin: 0px 10px;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  border-radius: 20px;
+  padding: 3px 18px;
+  letter-spacing: 1px;
+  font-size: 14px;
+  box-shadow: 0 0 10px #0003;
+  transition: all 1s ease;
+}
+.demo {
+  background-color: var(--high-lighted-color);
+  color: #fff;
+  font-weight: bold;
+}
+.source {
+  background-color: var(--primary-bg);
+  color: var(--primary-color);
+  border: solid 1px var(--primary-color);
+}
+.Project-Link:hover {
+  transform: translateY(-5px);
+}
+
+/* font-family: "Montserrat", sans-serif; */
+
+/*===========================================Media Query=========================================== */
+@media (max-width: 750px) {
+  .landing-section {
+    padding: 100px 0px;
+  }
+  .prof-section {
+    margin: 50px;
+  }
+  .p-list{
+    justify-content: center;
+  }
+  .Project-Link{
+    font-size: 12px;
+  }
+  .profile h1{
+    font-size: 40px;
+  }
+  .profile .iam{
+    font-size: 14px;
+    margin: 42px 0px;
+  }
+}
+
+
+.typed-fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  transform: translateY(20px);
+}
+
