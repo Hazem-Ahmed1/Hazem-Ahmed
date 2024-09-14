@@ -162,3 +162,75 @@ function initParticles() {
     }
   });
 }
+
+
+
+const projects = [
+  {
+    title: "Smurfs Token",
+    description: "Freelance game website",
+    tech: "HTML, CSS, JS, SCSS, Jquery, Bootstrap",
+    demoLink: "https://hazem-ahmed1.github.io/SmurfToken/", 
+    sourceLink: "https://github.com/Hazem-Ahmed1/SmurfToken",
+    image: "assets/images/Projects/SmurfToken.png"
+  },
+  {
+    title: "Tick Tock Treasure",
+    description: "3D Game Hack Splash with Rigging Character",
+    tech: "Unity, 3D Models, Rigging",
+    demoLink: "https://hazem-ahmed-a.itch.io/tick-tock-treasure",
+    sourceLink: "https://github.com/Hazem-Ahmed1/3D-Game-Grahpics",
+    image: "assets/images/Projects/TickTockTreasure.png"
+  },
+  {
+    title: "Zombie Time",
+    description: "2D Top Down Game",
+    tech: "Unity, C#",
+    demoLink: "https://hazem-ahmed-a.itch.io/zombie-time",
+    sourceLink: "https://github.com/Hazem-Ahmed1/Zombie-Time-Game-2D-Top-Down",
+    image: "assets/images/Projects/Zombie Time.png"
+  },
+  {
+    title: "Travelism",
+    description: "Front-End School Project",
+    tech: "HTML, CSS, JS, Bootstrap",
+    demoLink: "https://hazem-ahmed1.github.io/Travelism/",
+    sourceLink: "https://github.com/Hazem-Ahmed1/Travelism",
+    image: "assets/images/Projects/Travelism.png"
+  },
+  {
+    title: "To-Do-List",
+    description: "JS native To Do List",
+    tech: "HTML, CSS, JS, Bootstrap",
+    demoLink: "https://hazem-ahmed1.github.io/to-do-list-2/",
+    sourceLink: "https://github.com/Hazem-Ahmed1/to-do-list-2",
+    image: "assets/images/Projects/To-Do-List.png"
+  }
+];
+
+const projectContainer = document.getElementById('projectContainer');
+
+projects.forEach(project => {
+  const projectCard = `
+    <div class="col-lg-4 col-10 mb-5 Project-Container">
+      <div class="Project-Card">
+        <div class="Project-Image">
+          <img src="${project.image}" class="img-fluid" alt="${project.title}">
+        </div>
+        <div class="Project-Text pt-3 pb-3">
+          <h5 class="Project-Title high-lighted-color mb-4">${project.title}</h5>
+          <h6 class="Project-Desc">${project.description}</h6>
+          <p class="Project-Tech mb-lg-4">${project.tech}</p>
+          <div class="Project-Links pb-4">
+            <a class="Project-Link demo" href="${project.demoLink}"><i class="fa-solid fa-link"></i> Visit</a>
+            <a class="Project-Link source" href="${project.sourceLink}"><i class="fa-brands fa-github"></i> Source Code</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+  projectContainer.innerHTML += projectCard;
+});
+
+
+console.log(projects[2].title);

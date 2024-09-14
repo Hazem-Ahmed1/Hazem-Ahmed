@@ -339,7 +339,7 @@ header {
 }
 .Project-Title {
   font-family: "Montserrat", sans-serif;
-  color: var(--primary-color);
+
 }
 .Project-Desc {
   font-family: "Montserrat", sans-serif;
@@ -413,3 +413,27 @@ header {
   transform: translateY(20px);
 }
 
+
+
+
+
+.Project-Card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensures that content is evenly distributed */
+  height: 100%; /* Make the card take up the full height */
+}
+
+.Project-Image img {
+  width: 100%;
+  height: 250px; /* Ensure images scale correctly */
+}
+
+
+
+
+@media (max-width:750px) {
+  .Project-Image img{
+    height: 150px;
+  }
+}
